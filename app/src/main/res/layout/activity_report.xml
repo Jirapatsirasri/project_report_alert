@@ -198,12 +198,14 @@
             android:textSize="15dp"/>
     </RadioGroup>
 
-    <ImageButton
-        android:id="@+id/image_send"
+    <Button
+        android:id="@+id/btn_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/groupsend"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/send" />
+        android:text="Send to Report"
+        android:textSize="20dp"
+        android:textColor="@color/colorText"/>
 
 </RelativeLayout>

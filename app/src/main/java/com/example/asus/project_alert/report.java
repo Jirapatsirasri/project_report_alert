@@ -1,14 +1,19 @@
 package com.example.asus.project_alert;
 
 import android.content.Intent;
+import android.location.Location;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -19,7 +24,8 @@ import com.google.firebase.database.FirebaseDatabase;
 public class report extends AppCompatActivity {
     EditText text_topic, text_detail, text_location;
     RadioButton acc_eme, traffic, weather, secret_eme, identify, anonymous;
-    ImageButton image_send;
+    Button btn_send;
+    RadioGroup group_type,group_send;
     private DatabaseReference db, childRef, listLocation, listDetail, listType, listTopic;
     private FirebaseUser currentUser;
     private FirebaseAuth auth;
@@ -42,11 +48,82 @@ public class report extends AppCompatActivity {
         secret_eme = findViewById(R.id.ra_butt_secret_eme);
         identify = findViewById(R.id.ra_butt_identify);
         anonymous = findViewById(R.id.ra_butt_anonymous);
-        image_send = findViewById(R.id.image_send);
+        btn_send = findViewById(R.id.btn_send);
         text_location = findViewById(R.id.edittext_location);
+        group_type = findViewById(R.id.grouptype);
+        group_send = findViewById(R.id.groupsend);
+
+        //disable button
+        btn_send.setEnabled(false);
+
+        //changed text_topic
+        text_topic.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.toString().equals("")){
+                    btn_send.setEnabled(false);
+                }
+                else
+                    btn_send.setEnabled(true);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        //changed text_detail
+        text_detail.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.toString().equals("")){
+                    btn_send.setEnabled(false);
+                }
+                else
+                    btn_send.setEnabled(true);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        //changed text_location
+        text_location.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.toString().equals("")){
+                    btn_send.setEnabled(false);
+                }
+                else
+                    btn_send.setEnabled(true);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
         //image click to next page
-        image_send.setOnClickListener(new View.OnClickListener() {
+        btn_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

@@ -1,16 +1,30 @@
 package com.example.asus.project_alert;
 
 import android.content.Intent;
+import android.nfc.Tag;
+import android.support.annotation.NonNull;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainUser extends AppCompatActivity {
+
+    //firebase
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthStateListener;
+
+    //widget
+    private Button mSignOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,16 +58,15 @@ public class MainUser extends AppCompatActivity {
             }
         });
 
-
+        //crate sign out button
+        mSignOut = findViewById(R.id.sign_out);
+        mSignOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(MainUser.this, LoginActivity.class));
+                finish();
+            }
+        });
     }
-
-
 }
-
-
-
-    /*public void onClickNext (View view) {
-        Button bt_intent = findViewById(R.id.intent);
-        Intent intent = new Intent(MainUser.this,showAlert.class);
-        startActivity(intent);
-    }*/

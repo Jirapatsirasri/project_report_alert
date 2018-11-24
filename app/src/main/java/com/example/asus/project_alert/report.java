@@ -122,6 +122,7 @@ public class report extends AppCompatActivity {
             }
         });
 
+
         //image click to next page
         btn_send.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -145,6 +146,17 @@ public class report extends AppCompatActivity {
                 }
                 if (TextUtils.isEmpty(get_location)) {
                     Toast.makeText(getApplicationContext(), "Please fill the location!",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                //check group_type
+                if(group_type.getCheckedRadioButtonId() == -1){
+                    Toast.makeText(getApplicationContext(), "Please choose Type of Alert!",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(group_send.getCheckedRadioButtonId() == -1){
+                    Toast.makeText(getApplicationContext(), "Please choose Type of Send!",
                             Toast.LENGTH_SHORT).show();
                     return;
                 }

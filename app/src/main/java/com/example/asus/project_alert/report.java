@@ -186,7 +186,7 @@ public class report extends AppCompatActivity {
                     listType.setValue("Secret Emergency");
                 }
 
-                //choose button group_send
+                //choose button group_senก
                 if (identify.isChecked()) {
                     listType = childRef.child("Send_type");
                     listType.setValue("Identify your username");

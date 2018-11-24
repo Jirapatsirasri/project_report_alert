@@ -11,7 +11,19 @@
     tools:context=".MainUser"
     android:background="#FCF3CF">
 
-
+    //calling button
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <Button
+            android:id="@+id/calling"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/phone"
+            />
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"

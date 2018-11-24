@@ -31,8 +31,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/alertimage_alertpage"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="52dp"
+        android:layout_height="48dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
@@ -45,8 +45,8 @@
         android:layout_below="@id/alertimage_alertpage"
         android:layout_marginLeft="30dp"
         android:text="Topic"
-        android:textColor="@color/colorText"
-        android:textSize="20dp" />
+        android:textColor="#D98880"
+        android:textSize="15dp" />
 
     <EditText
         android:id="@+id/edittext_topic"
@@ -54,7 +54,7 @@
         android:layout_height="25dp"
         android:layout_below="@id/texttopic"
         android:layout_marginLeft="30dp"
-        android:background="@drawable/round_textbox"
+        android:background="@drawable/border"
         android:textColor="@color/colorText"
         android:textSize="20dp"
         android:paddingLeft="10dp"/>
@@ -66,8 +66,8 @@
         android:layout_below="@id/edittext_topic"
         android:layout_marginLeft="30dp"
         android:text="Detail"
-        android:textColor="@color/colorText"
-        android:textSize="20dp" />
+        android:textColor="#D98880"
+        android:textSize="15dp" />
 
     <EditText
         android:id="@+id/edittext_detail"
@@ -75,7 +75,7 @@
         android:layout_height="25dp"
         android:layout_below="@id/textdetail"
         android:layout_marginLeft="30dp"
-        android:background="@drawable/round_textbox"
+        android:background="@drawable/border"
         android:textColor="@color/colorText"
         android:textSize="20dp"
         android:paddingLeft="10dp"/>
@@ -87,8 +87,8 @@
         android:layout_below="@id/edittext_detail"
         android:layout_marginLeft="30dp"
         android:text="Location"
-        android:textColor="@color/colorText"
-        android:textSize="20dp" />
+        android:textColor="#D98880"
+        android:textSize="15dp" />
 
     <EditText
         android:id="@+id/edittext_location"
@@ -97,19 +97,28 @@
         android:layout_below="@id/textlocation"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
-        android:background="@drawable/round_textbox"
+        android:background="@drawable/border"
         android:textColor="@color/colorText"
         android:paddingLeft="10dp" />
+
     <TextView
         android:id="@+id/texttype"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/edittext_location"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="125dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="127dp"
+        android:layout_marginRight="127dp"
         android:text="Type of ALERT"
-        android:layout_marginLeft="30dp"
-        android:textSize="20dp"
-        android:textColor="@color/colorText"
-        />
+        android:textColor="#D98880"
+        android:textSize="18dp"
+        android:textStyle="bold" />
 
     <RadioGroup
         android:id="@+id/grouptype"
@@ -123,41 +132,49 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Accident / Emergency"
-            android:textSize="17dp"
-            android:textColor="@color/colorText"/>
+            android:textColor="#D98880"
+            android:textSize="15dp"/>
         <RadioButton
             android:id="@+id/ra_butt_traffic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Traffic"
-            android:textSize="17dp"
-            android:textColor="@color/colorText"/>
+            android:textColor="#D98880"
+            android:textSize="15dp"/>
         <RadioButton
             android:id="@+id/ra_butt_weahter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Weather"
-            android:textSize="17dp"
-            android:textColor="@color/colorText"/>
+            android:textColor="#D98880"
+            android:textSize="15dp"/>
         <RadioButton
             android:id="@+id/ra_butt_secret_eme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Secret Emergency"
-            android:textSize="17dp"
-            android:textColor="@color/colorText"/>
+            android:textColor="#D98880"
+            android:textSize="15dp"/>
     </RadioGroup>
 
     <TextView
         android:id="@+id/textsend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:text="Send as?"
-        android:textColor="@color/colorText"
-        android:textSize="20dp"
         android:layout_below="@id/grouptype"
-        />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="155dp"
+        android:layout_marginLeft="155dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginRight="157dp"
+        android:text="Send as?"
+        android:textColor="#D98880"
+        android:textSize="18dp"
+        android:textStyle="bold" />
     <RadioGroup
         android:id="@+id/groupsend"
         android:layout_width="wrap_content"
@@ -169,16 +186,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Identify your username"
-            android:textSize="17dp"
-            android:textColor="@color/colorText"
+            android:textColor="#D98880"
+            android:textSize="15dp"
             />
         <RadioButton
             android:id="@+id/ra_butt_anonymous"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Anonymous"
-            android:textSize="17dp"
-            android:textColor="@color/colorText"/>
+            android:textColor="#D98880"
+            android:textSize="15dp"/>
     </RadioGroup>
 
     <ImageButton

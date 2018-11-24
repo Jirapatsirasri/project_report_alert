@@ -52,8 +52,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="9dp"
         android:layout_gravity="center_horizontal"
-        android:text="ALERT!!!"
-        android:textStyle="bold"/>
+        android:text="!!! REPORT ALERT !!!"
+        android:textStyle="bold"
+        android:textColor="#D98880"/>
 
     <Button
         android:id="@+id/intent"

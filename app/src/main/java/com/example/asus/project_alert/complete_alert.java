@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 public class complete_alert extends AppCompatActivity {
 
-    ImageView alert;
-    TextView text,text1;
+    ImageView alert,text,text1;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complete_alert);

@@ -33,7 +33,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:src="@drawable/alert" />
+        android:src="@drawable/alert1" />
 
     <TextView
         android:id="@+id/texttopic"

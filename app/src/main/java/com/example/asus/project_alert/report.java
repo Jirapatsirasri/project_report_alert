@@ -1,6 +1,7 @@
 package com.example.asus.project_alert;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -27,6 +28,10 @@ public class report extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
+
+        //Create Action bar
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("REPORT ALERT");
 
         //create option button
         text_topic = findViewById(R.id.edittext_topic);

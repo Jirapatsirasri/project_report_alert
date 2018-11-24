@@ -1,5 +1,6 @@
 package com.example.asus.project_alert;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -28,6 +29,10 @@ public class showAlert extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_alert);
 
+        //Create Action bar
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("WHAT'S HAPPEN");
+
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -49,7 +54,7 @@ public class showAlert extends AppCompatActivity {
             if (dataSnapshot.exists()) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     Log.i("test", snapshot.toString());
-                    Log.i("test", snapshot.child("Type of Alert").getValue().toString());
+                   // Log.i("test", snapshot.child("Type of Alert").getValue().toString());
 
                     Alert alert = new Alert();
                     alert.type_of_alert = snapshot.child("Type of Alert").getValue().toString();

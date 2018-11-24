@@ -4,12 +4,15 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference mDatabase;
     private ProgressBar mProgress;
     private FirebaseAuth mAuth;
+    private RadioButton male,female;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         userPassword = (EditText) findViewById(R.id.password);
         userEmail = (EditText) findViewById(R.id.email);
         mSubmitButton = (Button) findViewById(R.id.submit);
+        male = findViewById(R.id.radioButton4);
+        female = findViewById(R.id.radioButton3);
         mProgress = new ProgressBar(this);
 
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Regristation");
@@ -60,11 +66,42 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Password too short, enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                if (TextUtils.isEmpty(name)){
+                    Toast.makeText(getApplicationContext(), "Enter username!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+//                //enable button when information complete
+//                username.addTextChangedListener(loginTextWatcher);
+//                userEmail.addTextChangedListener(loginTextWatcher);
+//                userPassword.addTextChangedListener(loginTextWatcher);
+
                 mProgress.setVisibility(View.VISIBLE);
                 startRegistration();
             }
         });
     }
+
+//    private  TextWatcher loginTextWatcher = new TextWatcher() {
+//        @Override
+//        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//        }
+//
+//        @Override
+//        public void onTextChanged(CharSequence s, int start, int before, int count) {
+//            String usernameInput = username.getText().toString().trim();
+//            String passwordInput = userPassword.getText().toString().trim();
+//            String emailInput = userEmail.getText().toString().trim();
+//
+//            mSubmitButton.setEnabled(!usernameInput.isEmpty() && !passwordInput.isEmpty() && !emailInput.isEmpty());
+//        }
+
+//        @Override
+//        public void afterTextChanged(Editable s) {
+//
+//        }
+//    };
 
     private void startRegistration() {
         final String name = username.getText().toString().trim();
@@ -78,7 +115,13 @@ public class MainActivity extends AppCompatActivity {
                 DatabaseReference current_user_db = mDatabase.child(user_id);
                 current_user_db.child("name").setValue(name);
                 current_user_db.child("email").setValue(email);
-
+                //db collect sex value
+                if (male.isChecked()) {
+                    current_user_db.child("sex").setValue("male");
+                }
+                if (female.isChecked()) {
+                    current_user_db.child("sex").setValue("female");
+                }
                 Toast.makeText(MainActivity.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
                 mProgress.setVisibility(View.GONE);
                 if (!task.isSuccessful()) {
@@ -97,12 +140,6 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         mProgress.setVisibility(View.GONE);
     }
-
-    //db
-//    if (.isChecked()) {
-//        listType = childRef.child("Type of Alert");
-//        listType.setValue("Accident / Emergency");
-//    }
 }
 
 

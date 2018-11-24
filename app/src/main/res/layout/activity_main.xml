@@ -19,20 +19,18 @@
         tools:layout_editor_absoluteY="0dp"
         tools:ignore="MissingConstraints">
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:text="Profile"
-            android:textSize="30sp"
+
+        <ImageView
+            android:id="@+id/profiletext"
+            android:layout_width="500dp"
+            android:layout_height="60dp"
+            android:src="@drawable/profiletext"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints,NotSibling"
+            android:layout_marginTop="20dp"/>
 
         <ImageView
             android:id="@+id/imageView"
@@ -42,10 +40,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6"
             app:layout_constraintVertical_bias="0.0"
             tools:ignore="MissingConstraints,NotSibling"
-            android:src="@drawable/profile1" />
+            android:src="@drawable/profile" />
 
         <EditText
             android:id="@+id/email"
@@ -91,7 +88,7 @@
             android:layout_width="308dp"
             android:layout_height="32dp"
             android:orientation="horizontal"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -114,7 +111,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="horizontal"
-                android:text="Female" />
+                android:text="Female"
+                android:textColor="#D98880"/>
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -128,7 +126,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Male" />
+                android:text="Male"
+                android:textColor="#D98880"/>
         </RadioGroup>
 
         <Button
@@ -136,12 +135,11 @@
             style="?android:textAppearanceSmall"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/borderbtn"
             android:text="Register"
             android:textColor="@android:color/white"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
 
     </LinearLayout>

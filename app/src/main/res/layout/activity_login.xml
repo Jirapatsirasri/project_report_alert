@@ -5,25 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
+
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@drawable/bg"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints">
+
 
         <EditText
             android:id="@+id/email"
             android:layout_width="350dp"
             android:layout_height="40dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="50dp"
             android:background="@drawable/border"
             android:hint="Email Address"
             android:inputType="textEmailAddress"
             android:maxLines="1"
+            android:paddingLeft="10dp"
             android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:paddingLeft="10dp"/>
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/password"
@@ -33,38 +39,65 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/border"
             android:focusableInTouchMode="true"
-            android:hint="8 Characters"
+            android:hint="Password"
             android:imeOptions="actionUnspecified"
             android:inputType="textPassword"
             android:maxLines="1"
+            android:paddingLeft="10dp"
             android:textColor="@android:color/black"
             android:textColorHint="@android:color/darker_gray"
-            android:textSize="16sp"
-            android:paddingLeft="10dp"/>
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btn_login"
-            android:text="Login"
-            style="?android:textAppearanceSmall"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:layout_marginTop="60dp"
-            android:textStyle="bold"
+            android:layout_marginTop="50dp"
             android:background="@drawable/borderbtn"
-            android:textColor="#FDFEFE"/>
+            android:text="Login"
+            android:textColor="#FDFEFE"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_signup"
 
-            android:text="Create new user"
-            android:textAllCaps="false"
-            android:textSize="15dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:layout_marginTop="20dip"
-            android:background="@drawable/borderbtn2"
-            android:textColor="@android:color/white"/>
+            android:layout_marginTop="20dp"
+            android:background="@drawable/borderbtn"
+            android:text="Create new user"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16dp" />
+
+
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.811"
+        app:srcCompat="@drawable/cityy"
+        tools:layout_editor_absoluteX="16dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="150dp"
+        android:layout_height="17dp"
+        android:text="𝙢𝙖𝙙𝙚 𝙬𝙞𝙩𝙝 𝙡𝙤𝙫𝙚 𝙗𝙮 𝘼𝘼"
+        android:textColor="#D0D3D4"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.062" />
 
     <ProgressBar
         android:id="@+id/progressBar"

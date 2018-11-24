@@ -4,27 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".report">
-
-    <!--//toolbar-->
-    <!--<android.support.v7.widget.Toolbar-->
-        <!--android:id="@+id/toolbar"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:theme="@style/MyCustomTheme">-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/text_title"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="report alert"-->
-            <!--android:textSize="30dp"-->
-            <!--android:textColor="@color/colorText"-->
-            <!--android:gravity="center"-->
-            <!--/>-->
-
-    <!--</android.support.v7.widget.Toolbar>-->
-
+    tools:context=".report"
+    android:background="#FCF3CF">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/alertimage_alertpage"

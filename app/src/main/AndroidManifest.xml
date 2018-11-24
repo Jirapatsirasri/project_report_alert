@@ -18,12 +18,16 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".report" android:parentActivityName=".MainUser" />
+        <activity
+            android:name=".report"
+            android:parentActivityName=".MainUser" />
         <activity android:name=".complete_alert" />
         <activity android:name=".MainUser" />
-        <activity android:name=".showAlert" android:parentActivityName=".MainUser"/>
+        <activity
+            android:name=".showAlert"
+            android:parentActivityName=".MainUser" />
         <activity android:name=".Alert" />
-
+        <activity android:name=".capt"></activity>
     </application>
 
 </manifest>

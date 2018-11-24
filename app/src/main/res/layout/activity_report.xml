@@ -173,7 +173,7 @@
         android:layout_marginRight="157dp"
         android:text="Send as?"
         android:textColor="#D98880"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold" />
     <RadioGroup
         android:id="@+id/groupsend"

@@ -27,7 +27,6 @@
             android:name=".showAlert"
             android:parentActivityName=".MainUser" />
         <activity android:name=".Alert" />
-        <activity android:name=".capt"></activity>
     </application>
 
 </manifest>

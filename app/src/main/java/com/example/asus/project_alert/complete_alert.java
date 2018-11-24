@@ -10,19 +10,19 @@ import android.widget.TextView;
 
 public class complete_alert extends AppCompatActivity {
 
-    ImageView alert,text,text1;
+    ImageView alert,textsuccess,textwait;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complete_alert);
         alert = findViewById(R.id.alertimage_completepage);
-        text = findViewById(R.id.text_alert_success);
-        text1 = findViewById(R.id.text_wait_update);
+        textsuccess = findViewById(R.id.text_alert_success);
+        textwait = findViewById(R.id.text_wait_update);
         //splash screen
         Animation splash = AnimationUtils.loadAnimation(this,R.anim.splashscreen);
         alert.startAnimation(splash);
-        text.startAnimation(splash);
-        text1.startAnimation(splash);
+        textsuccess.startAnimation(splash);
+        textwait.startAnimation(splash);
 
         //back alert_page
         final Intent i = new Intent(this,MainUser.class);
@@ -30,7 +30,7 @@ public class complete_alert extends AppCompatActivity {
             @Override
             public void run() {
                 try{
-                    sleep(5000);
+                    sleep(4000);
                 }catch (InterruptedException e){
                     e.printStackTrace();
                 }

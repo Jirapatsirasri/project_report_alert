@@ -4,25 +4,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg">
 
-    //toolbar
-    <!--<android.support.v7.widget.Toolbar-->
-        <!--android:id="@+id/toolbar"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:theme="@style/MyCustomTheme">-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/text_title"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="report alert"-->
-            <!--android:textSize="30dp"-->
-            <!--android:textColor="@color/colorText"-->
-            <!--android:gravity="center"-->
-            <!--/>-->
-
-    <!--</android.support.v7.widget.Toolbar>-->
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/alertimage_completepage"
         android:layout_width="150dp"
@@ -36,35 +17,17 @@
     <ImageView
         android:id="@+id/text_alert_success"
         android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="91dp"
-        android:layout_marginLeft="91dp"
-        android:layout_marginTop="220dp"
-        android:layout_marginEnd="93dp"
-        android:layout_marginRight="93dp"
-        android:layout_marginBottom="91dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/alertimage_completepage"
+        android:layout_centerHorizontal="true"
         android:src="@drawable/alertsuccess" />
 
     <ImageView
         android:id="@+id/text_wait_update"
         android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="91dp"
-        android:layout_marginLeft="91dp"
-        android:layout_marginTop="294dp"
-        android:layout_marginEnd="93dp"
-        android:layout_marginRight="93dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/text_alert_success"
+        android:layout_centerHorizontal="true"
         android:src="@drawable/plswait" />
 
 </RelativeLayout>

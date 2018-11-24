@@ -70,16 +70,18 @@
         android:textStyle="bold"
         android:textColor="@android:color/white"/>
 
-    <Button
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/sign_out"
-        android:text="sign out"
-        android:background="@drawable/intent"
-        android:layout_marginTop="10dp"
-        android:paddingHorizontal="15dp"
-        />
-
-
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/sign_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/borderbtn"
+            android:text="sign out"
+            android:textColor="@android:color/white"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
 
 </LinearLayout>

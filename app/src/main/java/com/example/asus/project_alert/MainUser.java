@@ -33,7 +33,7 @@ public class MainUser extends AppCompatActivity {
 
         //create action bar
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Main User");
+        actionBar.setTitle("Main Menu");
 
 
         ImageButton alert = findViewById(R.id.alert);

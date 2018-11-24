@@ -200,12 +200,14 @@
 
     <Button
         android:id="@+id/btn_send"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:layout_below="@id/groupsend"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/borderbtn"
         android:text="Send to Report"
-        android:textSize="20dp"
-        android:textColor="@color/colorText"/>
+        android:textColor="@color/colorText"
+        android:textSize="14sp" />
 
 </RelativeLayout>

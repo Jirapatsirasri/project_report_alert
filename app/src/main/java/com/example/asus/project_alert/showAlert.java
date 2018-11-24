@@ -31,7 +31,7 @@ public class showAlert extends AppCompatActivity {
 
         //Create Action bar
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("WHAT'S HAPPEN");
+        actionBar.setTitle("WHAT'S HAPPENED");
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);

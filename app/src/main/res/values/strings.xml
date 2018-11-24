@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">project_alert</string>
+    <string name="app_name">CITYZEN</string>
     <string name="minimum_password">password less than 6</string>
     <string name="auth_failed">auth failed</string>
 </resources>

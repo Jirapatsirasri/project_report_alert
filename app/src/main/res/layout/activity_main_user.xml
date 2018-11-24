@@ -1,50 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background=""
-    tools:context=".MainUser">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp"
+    tools:ignore="MissingConstraints"
+    tools:context=".MainUser"
+    android:background="#FCF3CF">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CITYZEN"
-        android:layout_marginTop="1dp"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/cityzen"
-        android:padding="10dp"/>
-    <ImageView
-        android:layout_marginTop="1dp"
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:id="@+id/line"
-        android:layout_gravity="center_horizontal"
-        android:layout_below="@id/cityzen"
-        android:src="@drawable/line"/>
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/images"
+            android:layout_marginLeft="100dp"/>
 
-    <Button
-        android:id="@+id/icon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignRight="@+id/cityzen"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginRight="9dp"
-        android:background="@drawable/images"/>
-
+        <Button
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/profile1"
+            android:text="PROFILE"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
     <ImageButton
         android:id="@+id/alert"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_below="@+id/line"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
         android:background="@drawable/alert1" />
 
 
@@ -52,9 +50,8 @@
         android:id="@+id/textALERT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/alert"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="9dp"
+        android:layout_gravity="center_horizontal"
         android:text="ALERT!!!"
         android:textStyle="bold"/>
 
@@ -62,16 +59,17 @@
         android:id="@+id/intent"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_below="@+id/textALERT"
         android:layout_marginTop="80dp"
-        android:layout_centerHorizontal="true"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="WHAT HAPPEN ?"
+        android:text=" WHAT HAPPEN >"
         tools:ignore="UnknownId"
+        android:layout_gravity="center_horizontal"
         android:background="@drawable/intent"
         android:padding="10dp"
         android:textStyle="bold"
-        android:layout_marginBottom="500dp"/>
+        android:textColor="@android:color/white"/>
 
 
-</RelativeLayout>
+
+
+</LinearLayout>

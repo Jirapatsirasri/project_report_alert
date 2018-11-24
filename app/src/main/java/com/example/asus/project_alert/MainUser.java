@@ -40,17 +40,20 @@ public class MainUser extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent1 = new Intent(MainUser.this, showAlert.class);
                 startActivity(intent1);
+
             }
         });
 
 
-
-
     }
+
+
+}
+
+
 
     /*public void onClickNext (View view) {
         Button bt_intent = findViewById(R.id.intent);
         Intent intent = new Intent(MainUser.this,showAlert.class);
         startActivity(intent);
     }*/
-}

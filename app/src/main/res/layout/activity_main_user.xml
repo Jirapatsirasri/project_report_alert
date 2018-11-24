@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background=""
     tools:context=".MainUser">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="cityzen"
+        android:text="CITYZEN"
         android:layout_marginTop="1dp"
         android:layout_centerHorizontal="true"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -34,7 +35,6 @@
         android:layout_marginTop="3dp"
         android:layout_marginEnd="9dp"
         android:layout_marginRight="9dp"
-        android:src="@drawable/images"
         android:background="@drawable/images"/>
 
 
@@ -44,7 +44,7 @@
         android:layout_height="70dp"
         android:layout_below="@+id/line"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/alert1" />
 
 
@@ -55,27 +55,23 @@
         android:layout_below="@+id/alert"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="9dp"
-        android:text="ALERT!!!" />
-
-    <TextView
-        android:id="@+id/whathappen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textALERT"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="WHAT HAPPEN ?"
-        tools:ignore="UnknownId" />
-
+        android:text="ALERT!!!"
+        android:textStyle="bold"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/whathappen"
-        android:text="KUY"
         android:id="@+id/intent"
-        android:onClick="onClickNext"/>
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textALERT"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="WHAT HAPPEN ?"
+        tools:ignore="UnknownId"
+        android:background="@drawable/intent"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="500dp"/>
 
 
 </RelativeLayout>

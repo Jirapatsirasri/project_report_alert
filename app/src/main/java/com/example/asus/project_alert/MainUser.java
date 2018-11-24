@@ -27,12 +27,24 @@ public class MainUser extends AppCompatActivity {
             }
         });
 
+        Button intent = findViewById(R.id.intent);
+
+        intent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(MainUser.this, showAlert.class);
+                startActivity(intent1);
+            }
+        });
+
+
+
 
     }
 
-    public void onClickNext (View view) {
+    /*public void onClickNext (View view) {
         Button bt_intent = findViewById(R.id.intent);
         Intent intent = new Intent(MainUser.this,showAlert.class);
         startActivity(intent);
-    }
+    }*/
 }

@@ -23,7 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class report extends AppCompatActivity {
     EditText text_topic, text_detail, text_location;
-    RadioButton acc_eme, traffic, weather, secret_eme, identify, anonymous;
+    RadioButton acc_eme, traffic, weather, identify, anonymous;
     Button btn_send;
     RadioGroup group_type,group_send;
     private DatabaseReference db, childRef, listLocation, listDetail, listType, listTopic;
@@ -45,7 +45,6 @@ public class report extends AppCompatActivity {
         acc_eme = findViewById(R.id.ra_butt_acc_eme);
         traffic = findViewById(R.id.ra_butt_traffic);
         weather = findViewById(R.id.ra_butt_weahter);
-        secret_eme = findViewById(R.id.ra_butt_secret_eme);
         identify = findViewById(R.id.ra_butt_identify);
         anonymous = findViewById(R.id.ra_butt_anonymous);
         btn_send = findViewById(R.id.btn_send);
@@ -181,12 +180,8 @@ public class report extends AppCompatActivity {
                     listType = childRef.child("Type of Alert");
                     listType.setValue("Weather");
                 }
-                if (secret_eme.isChecked()) {
-                    listType = childRef.child("Type of Alert");
-                    listType.setValue("Secret Emergency");
-                }
 
-                //choose button group_senก
+                //choose button group_send
                 if (identify.isChecked()) {
                     listType = childRef.child("Send_type");
                     listType.setValue("Identify your username");

@@ -148,13 +148,7 @@
             android:text="Weather"
             android:textColor="#D98880"
             android:textSize="15dp"/>
-        <RadioButton
-            android:id="@+id/ra_butt_secret_eme"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Secret Emergency"
-            android:textColor="#D98880"
-            android:textSize="15dp"/>
+
     </RadioGroup>
 
     <TextView

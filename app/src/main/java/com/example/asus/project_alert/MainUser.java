@@ -29,6 +29,8 @@ public class MainUser extends AppCompatActivity {
     //call
     private Button calling;
 
+    private Button profile;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +40,16 @@ public class MainUser extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Main Menu");
 
+
+        //create profile button
+
+        profile = (Button) findViewById(R.id.profile);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainUser.this, ProfileUser.class));
+            }
+        });
 
         ImageButton alert = findViewById(R.id.alert);
 

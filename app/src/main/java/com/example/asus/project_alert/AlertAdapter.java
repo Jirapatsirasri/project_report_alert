@@ -31,7 +31,7 @@ public class AlertAdapter extends RecyclerView.Adapter<AlertAdapter.AlertViewHol
         Alert alert = alertList.get(position);
         holder.detail.setText(alert.detail);
         holder.location.setText("Location: " + alert.location);
-        holder.sent_type.setText("Sent Type: " + alert.sent_type);
+        holder.sent_type.setText("Username: " + alert.sent_type);
         holder.topic.setText("Topic: " + alert.topic);
         holder.type_of_alert.setText("Type of Alert: " + alert.type_of_alert);
     }

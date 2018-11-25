@@ -3,6 +3,7 @@ package com.example.asus.project_alert;
 import android.content.Intent;
 import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -40,6 +41,10 @@ public class ProfileUser extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_user);
+
+        //Create Action bar
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("PROFILE");
 
         //Link to edit profile
         edit_profile = (Button) findViewById(R.id.edit_profile);

@@ -60,7 +60,7 @@ public class showAlert extends AppCompatActivity {
                     alert.type_of_alert = snapshot.child("Type of Alert").getValue().toString();
                     alert.detail = snapshot.child("Detail").getValue().toString();
                     alert.topic = snapshot.child("Topic").getValue().toString();
-                    alert.sent_type = snapshot.child("Send_type").getValue().toString();
+                    alert.sent_type = snapshot.child("Username").getValue().toString();
                     alert.location = snapshot.child("Location").getValue().toString();
                     alertList.add(alert);
                 }

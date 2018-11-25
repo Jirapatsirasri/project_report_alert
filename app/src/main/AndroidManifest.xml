@@ -30,8 +30,8 @@
         <activity
             android:name=".CallAlert"
             android:parentActivityName=".MainUser" />
-        <activity android:name=".ProfileUser" />
-        <activity android:name=".EditProfile"></activity>
+        <activity android:name=".ProfileUser" android:parentActivityName=".MainUser" />
+        <activity android:name=".EditProfile" android:parentActivityName=".ProfileUser"></activity>
     </application>
 
 </manifest>

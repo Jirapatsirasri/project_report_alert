@@ -95,6 +95,7 @@ public class MainUser extends AppCompatActivity {
             case R.id.logout:
                 Intent intent1 = new Intent(this,LoginActivity.class);
                 this.startActivity(intent1);
+                finish();
                 break;
         }
         return true;

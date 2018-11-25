@@ -32,7 +32,7 @@
             android:id="@+id/icon"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/images"
             android:layout_marginLeft="100dp"/>
 
@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginLeft="170dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/profile1"
             android:text="PROFILE"
             android:layout_centerHorizontal="true"
@@ -54,7 +54,7 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/alert1" />
 
 
@@ -72,7 +72,7 @@
         android:id="@+id/intent"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text=" WHAT HAPPENED >"
         tools:ignore="UnknownId"

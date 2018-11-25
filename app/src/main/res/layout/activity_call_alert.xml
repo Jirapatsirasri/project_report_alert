@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#FCF3CF">
+    android:background="#FCF3CF"
+    android:layout_gravity="center_horizontal">
 
 
     <TextView
@@ -33,7 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_below="@id/contact">
+        android:layout_below="@id/contact"
+        android:gravity="center_horizontal">
 
         <TextView
             android:id="@+id/police"
@@ -43,19 +45,17 @@
             android:layout_height="wrap_content"
             android:textSize="19dp"
             android:textColor="#000000"
-            />
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/txt"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="191"
             android:textColor="@color/colorPrimary"/>
 
         <View
-            android:layout_marginLeft="20dp"
             android:layout_width="25dp"
             android:layout_height="2dp"
             android:layout_marginBottom="20dp"
@@ -70,20 +70,18 @@
             android:layout_height="wrap_content"
             android:textSize="19dp"
             android:textColor="#000000"
-            />
+            android:textStyle="bold"/>
 
 
         <TextView
             android:id="@+id/lad"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
             android:text="0-2326-6505"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimary"
             />
         <View
-            android:layout_marginLeft="20dp"
             android:layout_width="82dp"
             android:layout_height="2dp"
             android:layout_marginBottom="20dp"
@@ -97,20 +95,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            />
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/rescue"
             android:layout_below="@id/rescuelad"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
             android:text="02-226-4444"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimary"
             />
         <View
-            android:layout_marginLeft="20dp"
             android:layout_width="82dp"
             android:layout_height="2dp"
             android:layout_marginBottom="20dp"
@@ -125,18 +121,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            />
+            android:textStyle="bold"/>
         <TextView
             android:id="@+id/hos1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
             android:text="0-2326-9995"
             android:textColor="@color/colorPrimary"
             />
         <View
-            android:layout_marginLeft="20dp"
             android:layout_width="82dp"
             android:layout_height="2dp"
             android:layout_marginBottom="20dp"
@@ -145,14 +139,12 @@
         <TextView
             android:id="@+id/hos2"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="02-326-7711"
             android:textColor="@color/colorPrimary"
             />
         <View
-            android:layout_marginLeft="20dp"
             android:layout_width="82dp"
             android:layout_height="2dp"
             android:layout_marginBottom="20dp"

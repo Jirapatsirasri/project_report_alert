@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.transition.TransitionManager;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,8 +28,11 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class report extends AppCompatActivity {
     private EditText text_topic, text_detail, text_location;
@@ -35,9 +40,10 @@ public class report extends AppCompatActivity {
     private Button btn_send;
     private RadioGroup group_type,group_send;
     private ViewGroup report;
-    private DatabaseReference db, childRef, listLocation, listDetail, listType, listTopic;
+    private DatabaseReference db, childRef, listLocation, listDetail, listType, listTopic,mDatabase;
     private FirebaseUser currentUser;
     private FirebaseAuth auth;
+    private String namecheck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -141,6 +147,7 @@ public class report extends AppCompatActivity {
             }
         });
 
+        final FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
         //image click to next page
         btn_send.setOnClickListener(new View.OnClickListener() {
@@ -202,13 +209,27 @@ public class report extends AppCompatActivity {
                 }
 
                 //choose button group_send
-                if (identify.isChecked()) {
-                    listType = childRef.child("Send_type");
-                    listType.setValue("Identify your username");
-                }
                 if (anonymous.isChecked()) {
                     listType = childRef.child("Send_type");
                     listType.setValue("Anonymous");
+                }
+                if (identify.isChecked()){
+                    listType = childRef.child("Send_type");
+                    db = FirebaseDatabase.getInstance().getReference("Regristation").child(currentUser.getUid());
+                    db.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if (identify.isChecked()) {
+                                if (dataSnapshot.exists()){
+                                    listType.setValue(dataSnapshot.child("name").getValue().toString());
+                                }
+                            }
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
                 }
 
                 //send data to database
@@ -220,12 +241,15 @@ public class report extends AppCompatActivity {
                 listLocation.setValue(get_location);
 //                listLocation.push().setValue(get_location);
 
+
+
                 //click to next page
                 Intent intent = new Intent(report.this, complete_alert.class);
                 startActivity(intent);
             }
         });
     }
+
     // แตะที่ไหน keyboard หายโดยไม่ต้องกดย้อนกลับ
     public boolean onTouchEvent(MotionEvent event) {
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.
@@ -233,4 +257,20 @@ public class report extends AppCompatActivity {
         imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
         return true;
     }
+
+    ValueEventListener valueEventListener = new ValueEventListener() {
+        @Override
+        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            if (identify.isChecked()) {
+                if (dataSnapshot.exists()){
+                    Log.i("Check", "data: " + dataSnapshot.child("name").getValue().toString());
+                    namecheck = dataSnapshot.child("name").getValue().toString();
+                }
+            }
+        }
+        @Override
+        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+        }
+    };
 }

@@ -77,15 +77,9 @@
         app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
-        app:layout_constraintVertical_bias="0.154" /><![CDATA[
+        app:layout_constraintVertical_bias="0.154" />
 
-
-    android:layout_width="100dp"
-    android:layout_height="250dp"
-    tools:layout_editor_absoluteX="49dp"
-    tools:layout_editor_absoluteY="226dp">
-
-    ]]><!--<Button-->
+      <!--<Button-->
         <!--android:id="@+id/sign_out"-->
         <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="44dp"-->
@@ -102,7 +96,7 @@
         <!--android:textColor="@android:color/white"-->
         <!--app:layout_constraintBottom_toBottomOf="parent"-->
         <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintHorizontal_bias="0.971"-->
+        <!--app:layout_constraintHorizotal_bias="0.971"-->
         <!--app:layout_constraintStart_toStartOf="parent"-->
         <!--app:layout_constraintTop_toTopOf="parent"-->
         <!--app:layout_constraintVertical_bias="0.968" />-->
@@ -141,9 +135,9 @@
         android:id="@+id/textviewreport2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textreport"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="302dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="295dp"
         android:text="View Report"
         android:textSize="18sp" />
 

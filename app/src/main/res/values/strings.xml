@@ -2,4 +2,6 @@
     <string name="app_name">CITYZEN</string>
     <string name="minimum_password">password less than 6</string>
     <string name="auth_failed">auth failed</string>
+    <string name="reorder">Profile</string>
+    <string name="logout">Sign out</string>
 </resources>

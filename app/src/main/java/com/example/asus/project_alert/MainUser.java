@@ -72,14 +72,14 @@ public class MainUser extends AppCompatActivity {
         });
 
         //crate sign out button
-        mSignOut = findViewById(R.id.sign_out);
-        mSignOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(MainUser.this, LoginActivity.class));
-                finish();
-            }
-        });
+//        mSignOut = findViewById(R.id.sign_out);
+//        mSignOut.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                FirebaseAuth.getInstance().signOut();
+//                startActivity(new Intent(MainUser.this, LoginActivity.class));
+//                finish();
+//            }
+//        });
     }
 }

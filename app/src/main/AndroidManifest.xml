@@ -20,7 +20,7 @@
         <activity android:name=".LoginActivity" />
         <activity
             android:name=".report"
-            android:parentActivityName=".MainUser"/>
+            android:parentActivityName=".MainUser" />
         <activity android:name=".complete_alert" />
         <activity android:name=".MainUser" />
         <activity

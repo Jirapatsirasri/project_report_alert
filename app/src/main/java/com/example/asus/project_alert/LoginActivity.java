@@ -1,11 +1,20 @@
 package com.example.asus.project_alert;
 
+import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.transition.TransitionManager;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -23,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     private ProgressBar progressBar;
     private FirebaseUser currentUser;
+    private ViewGroup login_page;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +44,62 @@ public class LoginActivity extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         btn_signup = (Button) findViewById(R.id.btn_signup);
         btn_login = (Button) findViewById(R.id.btn_login);
+        login_page = findViewById(R.id.login_page);
+
+        btn_login.setVisibility(View.INVISIBLE);
+        inputPassword.setVisibility(View.INVISIBLE);
+
+        //ใส่ email แล้วที่ใส่ password ขึ้น
+        inputEmail.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @TargetApi(Build.VERSION_CODES.KITKAT)
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.toString().equals("")){
+                    TransitionManager.beginDelayedTransition(login_page);
+                    inputPassword.setEnabled(false);
+                }
+                else
+                    TransitionManager.beginDelayedTransition(login_page);
+                    inputPassword.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        //ใส่ password แล้วปุ๋มขึ้น
+        inputPassword.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @TargetApi(Build.VERSION_CODES.KITKAT)
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.toString().equals("")){
+                    TransitionManager.beginDelayedTransition(login_page);
+                    btn_login.setEnabled(false);
+                }
+                else
+                    TransitionManager.beginDelayedTransition(login_page);
+                    btn_login.setVisibility(View.VISIBLE);
+                    btn_login.setEnabled(true);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
         //click button login
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,5 +143,12 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    // แตะที่ไหน keyboard หายโดยไม่ต้องกดย้อนกลับ
+    public boolean onTouchEvent(MotionEvent event) {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.
+                INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        return true;
     }
 }

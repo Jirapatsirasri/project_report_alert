@@ -1,14 +1,22 @@
 package com.example.asus.project_alert;
 
+import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.transition.TransitionManager;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -22,10 +30,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class report extends AppCompatActivity {
-    EditText text_topic, text_detail, text_location;
-    RadioButton acc_eme, traffic, weather, identify, anonymous;
-    Button btn_send;
-    RadioGroup group_type,group_send;
+    private EditText text_topic, text_detail, text_location;
+    private RadioButton acc_eme, traffic, weather, identify, anonymous;
+    private Button btn_send;
+    private RadioGroup group_type,group_send;
+    private ViewGroup report;
     private DatabaseReference db, childRef, listLocation, listDetail, listType, listTopic;
     private FirebaseUser currentUser;
     private FirebaseAuth auth;
@@ -40,6 +49,7 @@ public class report extends AppCompatActivity {
         actionBar.setTitle("REPORT ALERT");
 
         //create option button
+        report = findViewById(R.id.report_page);
         text_topic = findViewById(R.id.edittext_topic);
         text_detail = findViewById(R.id.edittext_detail);
         acc_eme = findViewById(R.id.ra_butt_acc_eme);
@@ -53,7 +63,7 @@ public class report extends AppCompatActivity {
         group_send = findViewById(R.id.groupsend);
 
         //disable button
-        btn_send.setEnabled(false);
+        btn_send.setVisibility(View.INVISIBLE);
 
         //changed text_topic
         text_topic.addTextChangedListener(new TextWatcher() {
@@ -62,12 +72,16 @@ public class report extends AppCompatActivity {
 
             }
 
+            @TargetApi(Build.VERSION_CODES.KITKAT)
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (s.toString().equals("")){
+                    TransitionManager.beginDelayedTransition(report);
                     btn_send.setEnabled(false);
                 }
                 else
+                    TransitionManager.beginDelayedTransition(report);
+                    btn_send.setVisibility(View.VISIBLE);
                     btn_send.setEnabled(true);
             }
 
@@ -84,12 +98,15 @@ public class report extends AppCompatActivity {
 
             }
 
+            @TargetApi(Build.VERSION_CODES.KITKAT)
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (s.toString().equals("")){
                     btn_send.setEnabled(false);
                 }
                 else
+                    TransitionManager.beginDelayedTransition(report);
+                    btn_send.setVisibility(View.VISIBLE);
                     btn_send.setEnabled(true);
             }
 
@@ -106,12 +123,15 @@ public class report extends AppCompatActivity {
 
             }
 
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (s.toString().equals("")){
                     btn_send.setEnabled(false);
                 }
                 else
+                    TransitionManager.beginDelayedTransition(report);
+                    btn_send.setVisibility(View.VISIBLE);
                     btn_send.setEnabled(true);
             }
 
@@ -205,5 +225,12 @@ public class report extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    // แตะที่ไหน keyboard หายโดยไม่ต้องกดย้อนกลับ
+    public boolean onTouchEvent(MotionEvent event) {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.
+                INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        return true;
     }
 }

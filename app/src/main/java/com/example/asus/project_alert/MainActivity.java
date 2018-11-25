@@ -1,5 +1,6 @@
 package com.example.asus.project_alert;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.ActionBar;
@@ -9,7 +10,9 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -145,6 +148,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         mProgress.setVisibility(View.GONE);
+    }
+    // แตะที่ไหน keyboard หายโดยไม่ต้องกดย้อนกลับ
+    public boolean onTouchEvent(MotionEvent event) {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.
+                INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        return true;
     }
 }
 

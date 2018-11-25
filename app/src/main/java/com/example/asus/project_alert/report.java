@@ -210,11 +210,11 @@ public class report extends AppCompatActivity {
 
                 //choose button group_send
                 if (anonymous.isChecked()) {
-                    listType = childRef.child("Send_type");
+                    listType = childRef.child("Username");
                     listType.setValue("Anonymous");
                 }
                 if (identify.isChecked()){
-                    listType = childRef.child("Send_type");
+                    listType = childRef.child("Username");
                     db = FirebaseDatabase.getInstance().getReference("Regristation").child(currentUser.getUid());
                     db.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override

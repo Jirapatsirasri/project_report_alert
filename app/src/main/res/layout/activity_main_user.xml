@@ -137,7 +137,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="295dp"
+        android:layout_marginTop="296dp"
         android:text="View Report"
         android:textSize="18sp" />
 

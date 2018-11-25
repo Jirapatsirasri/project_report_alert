@@ -27,7 +27,10 @@
             android:name=".showAlert"
             android:parentActivityName=".MainUser" />
         <activity android:name=".Alert" />
-        <activity android:name=".CallAlert" android:parentActivityName=".MainUser"></activity>
+        <activity
+            android:name=".CallAlert"
+            android:parentActivityName=".MainUser" />
+        <activity android:name=".table"></activity>
     </application>
 
 </manifest>

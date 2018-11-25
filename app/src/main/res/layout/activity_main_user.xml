@@ -1,100 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="#FCF3CF"
     android:orientation="vertical"
-    tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="0dp"
-    tools:ignore="MissingConstraints"
     tools:context=".MainUser"
-    android:background="#FCF3CF">
+    tools:ignore="MissingConstraints"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
 
     //calling button
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-        <Button
-            android:id="@+id/calling"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/bt_ef_phone"
-            />
-    </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <Button
-            android:id="@+id/icon"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/images"
-            android:layout_marginLeft="100dp"/>
 
-        <Button
-            android:id="@+id/profile"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginLeft="170dp"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/bt_ef_profile"
-            android:text="PROFILE"
-            android:layout_centerHorizontal="true"
-            android:textColor="@android:color/white"
-            android:textStyle="bold" />
     </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="479dp">
+
+        <!--<Button-->
+        <!--android:id="@+id/icon"-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_marginLeft="100dp"-->
+        <!--android:layout_marginTop="40dp"-->
+        <!--android:background="@drawable/images" />-->
+
+        <!--<Button-->
+        <!--android:id="@+id/profile"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginLeft="170dp"-->
+        <!--android:layout_marginTop="40dp"-->
+        <!--android:background="@drawable/bt_ef_profile"-->
+        <!--android:text="PROFILE"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:textStyle="bold" />-->
+    </RelativeLayout>
+
+    //alertbtn
 
     <ImageButton
         android:id="@+id/alert"
         android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/bt_ef_alert"/>
-
-
+        android:layout_height="71dp"
+        android:layout_marginBottom="396dp"
+        android:background="@drawable/bt_ef_alert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textALERT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:layout_gravity="center_horizontal"
-        android:text="!!! REPORT ALERT !!!"
-        android:textStyle="bold"
-        android:textColor="#D98880"/>
+        android:id="@+id/textView2"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="341dp"/>
+
+    //line
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="400dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#a40404"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.312" />
 
     <Button
         android:id="@+id/intent"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginTop="60dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text=" WHAT HAPPENED >"
-        tools:ignore="UnknownId"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/bt_ef_whathappened"
-        android:padding="10dp"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"/>
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bt_ef_eye"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.154" />
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <Button
-            android:id="@+id/sign_out"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bt_ef_signout"
-            android:text="sign out"
-            android:textColor="@android:color/white"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"/>
-    </RelativeLayout>
+    <View
+        android:layout_width="400dp"
+        android:layout_height="2dp"
+        android:layout_marginBottom="8dp"
+        android:background="#a40404"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.68" />
 
-</LinearLayout>
+
+    android:layout_width="100dp"
+    android:layout_height="250dp"
+    tools:layout_editor_absoluteX="49dp"
+    tools:layout_editor_absoluteY="226dp">
+
+    <Button
+        android:id="@+id/sign_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bt_ef_signout"
+        android:text="sign out"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.971"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.968" />
+
+    <Button
+        android:id="@+id/calling"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginRight="104dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bt_ef_phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.768" />
+
+
+</android.support.constraint.ConstraintLayout>

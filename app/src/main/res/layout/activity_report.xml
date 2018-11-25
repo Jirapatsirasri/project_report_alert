@@ -191,7 +191,7 @@
         android:layout_below="@id/groupsend"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="6dp"
-        android:background="@drawable/borderbtn"
+        android:background="@drawable/bt_ef_signout"
         android:text="Send to Report"
         android:textColor="@android:color/white"
         android:textSize="14sp" />

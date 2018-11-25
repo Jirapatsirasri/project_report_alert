@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#FCF3CF"
+    android:layout_gravity="center_horizontal">
+
+
+    <TextView
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="ALERT Contact book "
+        android:textColor="#D98880"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        />
+    <ImageView
+        android:layout_toRightOf="@id/contact"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/phone"/>
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/lin1"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/contact"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/police"
+            android:layout_marginTop="10dp"
+            android:text="Police Officer  "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19dp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="191"
+            android:textColor="@color/colorPrimary"/>
+
+        <View
+            android:layout_width="25dp"
+            android:layout_height="2dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimary" />
+
+
+        <TextView
+            android:id="@+id/ladpolice"
+            android:layout_marginTop="10dp"
+            android:text="Ladkrabang Police  "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19dp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/lad"
+            android:layout_marginTop="10dp"
+            android:text="0-2326-6505"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            />
+        <View
+            android:layout_width="82dp"
+            android:layout_height="2dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/rescuelad"
+            android:layout_marginTop="10dp"
+            android:text="Rescue Ladkrabang  "
+            android:textSize="19dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/rescue"
+            android:layout_below="@id/rescuelad"
+            android:layout_marginTop="10dp"
+            android:text="02-226-4444"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            />
+        <View
+            android:layout_width="82dp"
+            android:layout_height="2dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/hoslad"
+            android:text="Ladkrabang Hospital  "
+            android:layout_below="@id/rescue"
+            android:textSize="19dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/hos1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="0-2326-9995"
+            android:textColor="@color/colorPrimary"
+            />
+        <View
+            android:layout_width="82dp"
+            android:layout_height="2dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/hos2"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="02-326-7711"
+            android:textColor="@color/colorPrimary"
+            />
+        <View
+            android:layout_width="82dp"
+            android:layout_height="2dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimary" />
+    </LinearLayout>
+
+</RelativeLayout>

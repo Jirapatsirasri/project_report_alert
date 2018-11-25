@@ -26,6 +26,9 @@ public class MainUser extends AppCompatActivity {
     //widget
     private Button mSignOut;
 
+    //call
+    private Button calling;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +58,16 @@ public class MainUser extends AppCompatActivity {
                 Intent intent1 = new Intent(MainUser.this, showAlert.class);
                 startActivity(intent1);
 
+            }
+        });
+
+        //create call button
+        calling = findViewById(R.id.calling);
+        calling.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(MainUser.this, CallAlert.class);
+                startActivity(intent2);
             }
         });
 

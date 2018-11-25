@@ -61,7 +61,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (s.toString().equals("")){
                     TransitionManager.beginDelayedTransition(login_page);
-                    inputPassword.setEnabled(false);
+                    inputPassword.setVisibility(View.INVISIBLE);
+                    btn_login.setEnabled(false);
                 }
                 else
                     TransitionManager.beginDelayedTransition(login_page);

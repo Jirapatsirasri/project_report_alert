@@ -142,7 +142,14 @@
             android:text="Weather"
             android:textColor="#D98880"
             android:textSize="15dp"/>
-
+        <RadioButton
+            android:id="@+id/ra_butt_lost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lost and Found"
+            android:textColor="#D98880"
+            android:textSize="15dp"
+            />
     </RadioGroup>
 
     <TextView

@@ -36,7 +36,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class report extends AppCompatActivity {
     private EditText text_topic, text_detail, text_location;
-    private RadioButton acc_eme, traffic, weather, identify, anonymous;
+    private RadioButton acc_eme, traffic, weather, identify, anonymous,lost;
     private Button btn_send;
     private RadioGroup group_type,group_send;
     private ViewGroup report;
@@ -62,6 +62,7 @@ public class report extends AppCompatActivity {
         traffic = findViewById(R.id.ra_butt_traffic);
         weather = findViewById(R.id.ra_butt_weahter);
         identify = findViewById(R.id.ra_butt_identify);
+        lost = findViewById(R.id.ra_butt_lost);
         anonymous = findViewById(R.id.ra_butt_anonymous);
         btn_send = findViewById(R.id.btn_send);
         text_location = findViewById(R.id.edittext_location);
@@ -207,6 +208,11 @@ public class report extends AppCompatActivity {
                     listType = childRef.child("Type of Alert");
                     listType.setValue("Weather");
                 }
+                if (lost.isChecked()) {
+                    listType = childRef.child("Type of Alert");
+                    listType.setValue("Lost and Found");
+                }
+
 
                 //choose button group_send
                 if (anonymous.isChecked()) {

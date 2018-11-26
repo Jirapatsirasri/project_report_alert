@@ -43,14 +43,14 @@ public class MainUser extends AppCompatActivity {
 
         //create profile button
 
-        profile = (Button) findViewById(R.id.profile);
-        profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                startActivity(new Intent(MainUser.this, ProfileUser.class));
-            }
-        });
+//        profile = (Button) findViewById(R.id.profile);
+//        profile.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                startActivity(new Intent(MainUser.this, ProfileUser.class));
+//            }
+//        });
 
         ImageButton alert = findViewById(R.id.alert);
 

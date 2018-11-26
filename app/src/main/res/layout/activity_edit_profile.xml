@@ -82,6 +82,7 @@
         android:hint="Enter new username"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="377dp"
-        android:textColor="@color/colorText"/>
+        android:textColor="@color/colorText"
+        android:singleLine="true"/>
 
 </RelativeLayout>

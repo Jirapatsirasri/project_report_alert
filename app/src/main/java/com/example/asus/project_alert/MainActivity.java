@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final String name = username.getText().toString().trim();
-                String password = userPassword.getText().toString().trim();
+                final String password = userPassword.getText().toString().trim();
                 final String email = userEmail.getText().toString().trim();
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
@@ -80,41 +80,15 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-//                //enable button when information complete
-//                username.addTextChangedListener(loginTextWatcher);
-//                userEmail.addTextChangedListener(loginTextWatcher);
-//                userPassword.addTextChangedListener(loginTextWatcher);
-
                 mProgress.setVisibility(View.VISIBLE);
                 startRegistration();
             }
         });
     }
 
-//    private  TextWatcher loginTextWatcher = new TextWatcher() {
-//        @Override
-//        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//        }
-//
-//        @Override
-//        public void onTextChanged(CharSequence s, int start, int before, int count) {
-//            String usernameInput = username.getText().toString().trim();
-//            String passwordInput = userPassword.getText().toString().trim();
-//            String emailInput = userEmail.getText().toString().trim();
-//
-//            mSubmitButton.setEnabled(!usernameInput.isEmpty() && !passwordInput.isEmpty() && !emailInput.isEmpty());
-//        }
-
-//        @Override
-//        public void afterTextChanged(Editable s) {
-//
-//        }
-//    };
-
     private void startRegistration() {
         final String name = username.getText().toString().trim();
-        String password = userPassword.getText().toString().trim();
+        final String password = userPassword.getText().toString().trim();
         final String email = userEmail.getText().toString().trim();
 
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {

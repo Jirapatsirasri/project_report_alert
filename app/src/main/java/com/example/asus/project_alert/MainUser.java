@@ -7,6 +7,9 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -43,14 +46,6 @@ public class MainUser extends AppCompatActivity {
 
         //create profile button
 
-//        profile = (Button) findViewById(R.id.profile);
-//        profile.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                startActivity(new Intent(MainUser.this, ProfileUser.class));
-//            }
-//        });
 
         ImageButton alert = findViewById(R.id.alert);
 
@@ -93,5 +88,26 @@ public class MainUser extends AppCompatActivity {
 //                finish();
 //            }
 //        });
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.toolbar, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem menu){
+        switch (menu.getItemId()){
+            case R.id.profile:
+                Intent intent = new Intent(this, ProfileUser.class);
+                this.startActivity(intent);
+                break;
+            case R.id.logout:
+                Intent intent1 = new Intent(this, LoginActivity.class);
+                this.startActivity(intent1);
+                finish();
+                break;
+        }
+    return true;
     }
 }

@@ -3,16 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <TextView
+    <ImageView
         android:id="@+id/Show"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Show update ALERT"
-        android:textColor="#D98880"
-        android:textSize="30dp"
-        android:textStyle="bold" />
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:src="@drawable/showalertttt"
+        android:layout_centerHorizontal="true"/>
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"

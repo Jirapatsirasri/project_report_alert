@@ -19,18 +19,14 @@
         tools:layout_editor_absoluteY="0dp"
         tools:ignore="MissingConstraints">
 
-
         <ImageView
-            android:id="@+id/profiletext"
-            android:layout_width="500dp"
-            android:layout_height="60dp"
-            android:src="@drawable/profiletext"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:ignore="MissingConstraints,NotSibling"
-            android:layout_marginTop="20dp"/>
+            android:id="@+id/edittext"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:src="@drawable/register"
+            android:layout_marginTop="10dp"
+            />
+
 
         <ImageView
             android:id="@+id/imageView"

@@ -7,13 +7,22 @@
     tools:context=".EditProfile"
     android:background="#FCF3CF">
 
+
+    <ImageView
+        android:id="@+id/editt"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/editproflie"
+        android:layout_marginTop="10dp"/>
+
     <ImageView
         android:id="@+id/profile1"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_alignParentTop="true"
+        android:layout_below="@id/editt"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="-1dp"
         android:src="@drawable/profile" />
 
     <Button
@@ -22,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="330dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/borderbtn2"
         android:text="SAVE"
@@ -76,7 +85,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginStart="73dp"
         android:layout_marginLeft="73dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="70dp"
         android:layout_marginRight="70dp"
         android:hint="Enter new username"

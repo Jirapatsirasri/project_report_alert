@@ -29,10 +29,10 @@ public class AlertAdapter extends RecyclerView.Adapter<AlertAdapter.AlertViewHol
     @Override
     public void onBindViewHolder(@NonNull AlertViewHolder holder, int position) {
         Alert alert = alertList.get(position);
-        holder.detail.setText(alert.detail);
+        holder.topic.setText(alert.topic);
         holder.location.setText("Location: " + alert.location);
         holder.sent_type.setText("Username: " + alert.sent_type);
-        holder.topic.setText("Topic: " + alert.topic);
+        holder.detail.setText("Detail: " + alert.detail);
         holder.type_of_alert.setText("Type of Alert: " + alert.type_of_alert);
     }
 
@@ -48,10 +48,10 @@ public class AlertAdapter extends RecyclerView.Adapter<AlertAdapter.AlertViewHol
         public AlertViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            detail = itemView.findViewById(R.id.detail);
+            topic = itemView.findViewById(R.id.topic);
             location = itemView.findViewById(R.id.location);
             sent_type = itemView.findViewById(R.id.sent_type);
-            topic = itemView.findViewById(R.id.topic);
+            detail = itemView.findViewById(R.id.detail);
             type_of_alert = itemView.findViewById(R.id.type_of_alert);
 
 

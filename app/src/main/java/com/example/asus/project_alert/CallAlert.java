@@ -20,7 +20,7 @@ public class CallAlert extends AppCompatActivity {
         setContentView(R.layout.activity_call_alert);
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Call Alert");
+        actionBar.setTitle("EMERGENCY CALL");
 
         txt = (TextView) findViewById(R.id.txt);
         lad = (TextView) findViewById(R.id.lad);

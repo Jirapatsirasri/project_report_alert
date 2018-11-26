@@ -55,6 +55,10 @@ public class EditProfile extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Pls fill username!",Toast.LENGTH_SHORT);
                 }
                 sendToFireBase(/*get_userEmail,*/get_username);
+
+                Intent intent = new Intent(EditProfile.this, ProfileUser.class);
+                startActivity(intent);
+                finish();
             }
 
         });

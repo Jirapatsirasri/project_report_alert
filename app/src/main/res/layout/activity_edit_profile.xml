@@ -14,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        android:src="@drawable/profile" />
 
     <Button
         android:id="@+id/btn_save"
@@ -24,7 +24,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="300dp"
         android:layout_marginEnd="16dp"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/borderbtn2"
         android:text="SAVE"
         android:textColor="@color/colorWhite"
         android:textSize="17dp" />
@@ -81,6 +81,7 @@
         android:layout_marginRight="70dp"
         android:hint="Enter new username"
         tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="377dp" />
+        tools:layout_editor_absoluteY="377dp"
+        android:textColor="@color/colorText"/>
 
 </RelativeLayout>
